@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Accordion from './components/Accordion';
 import Search from './components/Search';
 import DropDown from './components/DropDown';
+import Translate from './components/Translate';
 
 
 const items = [
@@ -39,11 +40,7 @@ const App = () => {
 
     return (
         <div>
-            <DropDown selected={selected}
-                      options={options}
-                      label="Select a Color"
-                      onSelectedChange={setSelected}
-            />
+            <Translate />
         </div>
     );
 };
