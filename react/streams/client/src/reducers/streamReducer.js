@@ -10,6 +10,9 @@ import {
 export default (state = {}, action) => {
   switch (action.type) {
     case FETCH_STREAMS:
+      console.log(state)
+      console.log(_.mapKeys(action.payload, (stream) => stream.id))
+      console.log({ ...state, ..._.mapKeys(action.payload, (stream) => stream.id) })
       return { ...state, ..._.mapKeys(action.payload, (stream) => stream.id) }
 
     case FETCH_STREAM:
